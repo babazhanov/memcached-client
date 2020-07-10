@@ -2,7 +2,7 @@
 Клиент Memcached для Python
 
 ### Установка
-Необходимо установить и запустить сервер Memcached. Для Windows в директории src можно запустить memcached.exe.
+Необходимо установить и запустить сервер [Memcached](https://memcached.org/). Для Windows в директории srv можно запустить memcached.exe.
 
 ### Использование
 ```python
