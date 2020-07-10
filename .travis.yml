@@ -7,4 +7,4 @@ install:
 services:
   - memcached
 # command to run tests
-script: ./tests.py
+script: python3 tests.py || python tests.py
