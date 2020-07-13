@@ -19,6 +19,9 @@ class FirstTestCase(unittest.TestCase):
         value1 = self.client.get('key1')
         self.assertTrue(value1 == 'value1')
 
+    def test_memory_leak(self):
+        client = memcached.Client('localhost')
+
     def test_delete(self):
         self.client.set('key3', 'value3')
         res = self.client.delete('key3')

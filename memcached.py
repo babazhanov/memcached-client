@@ -13,6 +13,10 @@ class Client:
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.socket.connect((self.host, 11211))
 
+    def __del__(self):
+        if hasattr(self, 'socket') and isinstance(self.socket, socket.socket):
+            self.socket.close()
+
     def set(self, key: str, value: str):
         """Записать значение"""
 
